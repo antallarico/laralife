@@ -17,6 +17,7 @@ Route::prefix('alimentazione')->name('planner.alimentazione.')->group(function (
 	Route::patch('/qty/{id}', [PlannerAlim::class, 'updateQuantita'])->name('updateQty');
     Route::post('planner/reorder', [PlannerAlim::class, 'reorder'])->name('reorder');     
     Route::delete('planner/{id}',  [PlannerAlim::class, 'destroy'])->name('destroy');
+	
 });
 
 Route::prefix('planner/allenamento')->name('planner.allenamento.')->group(function () {
@@ -47,6 +48,7 @@ Route::prefix('alimentazione')->name('alimentazione.')->group(function () {
 	Route::post('dispensa',         [DispensaController::class, 'store'])->name('dispensa.store');
 	Route::put('dispensa/{dispensa}', [DispensaController::class, 'update'])->name('dispensa.update');
     Route::delete('dispensa/{dispensa}', [DispensaController::class, 'destroy'])->name('dispensa.destroy'); // opzionale
+	Route::post('dispensa/{id}/chiudi-parziale', [DispensaController::class, 'chiudiParziale'])->name('dispensa.chiudi-parziale');
 	/*
     Route::resource('alimenti', AlimentiController::class)
         ->parameters(['alimenti' => 'alimento'])

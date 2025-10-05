@@ -22,7 +22,7 @@
   </select>
 </div>
   <div class="col-md-3">
-    <label class="form-label">Quantità *</label>
+    <label class="form-label">Quantità (per pezzo)*</label>
     <input type="number" step="1" min="1" name="quantita" class="form-control" required>
   </div>
   <div class="col-md-3">
